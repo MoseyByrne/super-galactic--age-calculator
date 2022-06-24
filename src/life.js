@@ -59,4 +59,11 @@ export class Life {
     let jupiterAge = this.age;
     return jupiterAge;
   }
+
+  yearsLeftOnJupiter() {
+    this.yearsLeft /= 11.86;
+    this.yearsLeft = Math.floor(this.yearsLeft);
+    let yearsLeftOnJupiter = this.yearsLeft;
+    return yearsLeftOnJupiter;
+  }
 }
