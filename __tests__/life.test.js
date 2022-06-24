@@ -4,10 +4,11 @@ import { Life} from '../src/life.js';
 describe('Life', () => {
 
   test('should create a Life object with name, age, and life expectancy', () => {
-    const earthLife = new Life("Mo",35, 135);
+    const earthLife = new Life("Mo",35, 135, );
     expect(earthLife.name).toEqual("Mo")
     expect(earthLife.age).toEqual(35);
     expect(earthLife.lifeExpectancy).toEqual(135);
+    expect(earthLife.yearsLeft).toEqual(100);
   });
 });
 
@@ -19,7 +20,7 @@ test('should convert Earth age to age on Mercury', () => {
 
 test('should convert Earth life expectancy to Mercury life expectancy', () => {
   const earthLife = new Life("Mo",35, 135);
-  earthLife.mercuryLifeExpectancy();
+  earthLife.mercuryLifeExpect();
   expect(earthLife.lifeExpectancy).toEqual(562);
 });
 
@@ -43,12 +44,12 @@ test('should convert Earth age to age on Jupiter', () => {
 
 test('should convert Earth life expectancy to Mercury life expectancy', () => {
   const earthLife = new Life("Mo",35, 135);
-  earthLife.mercuryLifeExpectancy();
+  earthLife.mercuryLifeExpect();
   expect(earthLife.lifeExpectancy).toEqual(562);
 });
 
 test('should minus mercuryAge from mercuryLifeExpectancy and return yearsLeftOnMercury', () => {
   const earthLife = new Life("Mo",35, 135);
   earthLife.yearsLeftOnMercury();
-  expect(earthLife.lifeExpectancy).toEqual(417);
+  expect(earthLife.yearsLeft).toEqual(416);
 });

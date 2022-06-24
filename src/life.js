@@ -4,6 +4,7 @@ export class Life {
     this.name = name;
     this.age = age;
     this.lifeExpectancy = lifeExpectancy;
+    this.yearsLeft = lifeExpectancy - age;
   }
 
 // Business Logic for Mercury
@@ -14,19 +15,17 @@ export class Life {
     return mercuryAge;
   }
 
-  mercuryLifeExpectancy() {
+  mercuryLifeExpect() {
     this.lifeExpectancy /= .24;
     this.lifeExpectancy = Math.floor(this.lifeExpectancy);
-    const mercuryLifeExpectancy = this.lifeExpectancy;
+    let mercuryLifeExpectancy = this.lifeExpectancy;
     return mercuryLifeExpectancy;
   }
-
+  
   yearsLeftOnMercury() {
-    this.mercuryLifeExpectancy();
-    this.mercuryAge(); 
-    console.log(this.mercuryLifeExpectancy());
-    console.log(this.mercuryAge());
-    let yearsLeftOnMercury = this.mercuryLifeExpectancy;
+    this.yearsLeft /= .24;
+    this.yearsLeft = Math.floor(this.yearsLeft);
+    let yearsLeftOnMercury = this.yearsLeft;
     return yearsLeftOnMercury;
   }
 
