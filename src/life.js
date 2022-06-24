@@ -21,6 +21,7 @@ export class Life {
     let yearsLeftOnMercury = this.yearsLeft;
     return yearsLeftOnMercury;
   }
+
 // Business Logic for Venus
   venusAge() { 
     this.age /= .62;
@@ -28,6 +29,14 @@ export class Life {
     let venusAge = this.age;
     return venusAge;
   }
+
+  yearsLeftOnVenus() {
+    this.yearsLeft /= .62;
+    this.yearsLeft = Math.floor(this.yearsLeft);
+    let yearsLeftOnVenus = this.yearsLeft;
+    return yearsLeftOnVenus;
+  }
+
 // Business Logic for Mars
   marsAge() { 
     this.age /= 1.88;
