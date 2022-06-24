@@ -28,3 +28,9 @@ test('should convert Earth age to age on Venus', () => {
   earthLife.venusAge();
   expect(earthLife.age).toEqual(56)
 });
+
+test('should convert Earth age to age on Mars', () => {
+  const earthLife = new Life("Mo",35, 135);
+  earthLife.marsAge();
+  expect(earthLife.age).toEqual(18)
+});
