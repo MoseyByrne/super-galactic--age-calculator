@@ -14,13 +14,6 @@ export class Life {
     let mercuryAge = this.age;
     return mercuryAge;
   }
-
-  mercuryLifeExpect() {
-    this.lifeExpectancy /= .24;
-    this.lifeExpectancy = Math.floor(this.lifeExpectancy);
-    let mercuryLifeExpectancy = this.lifeExpectancy;
-    return mercuryLifeExpectancy;
-  }
   
   yearsLeftOnMercury() {
     this.yearsLeft /= .24;
@@ -28,21 +21,21 @@ export class Life {
     let yearsLeftOnMercury = this.yearsLeft;
     return yearsLeftOnMercury;
   }
-
+// Business Logic for Venus
   venusAge() { 
     this.age /= .62;
     this.age = Math.floor(this.age);
     let venusAge = this.age;
     return venusAge;
   }
-
+// Business Logic for Mars
   marsAge() { 
     this.age /= 1.88;
     this.age = Math.floor(this.age);
     let marsAge = this.age;
     return marsAge;
   }
-
+// Business Logic for Jupiter
   jupiterAge() { 
     this.age /= 11.86;
     this.age = Math.floor(this.age);

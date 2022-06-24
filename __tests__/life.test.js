@@ -18,16 +18,22 @@ test('should convert Earth age to age on Mercury', () => {
   expect(earthLife.age).toEqual(145)
 });
 
-test('should convert Earth life expectancy to Mercury life expectancy', () => {
+test('should convert Earth years left to years left on Mercury', () => {
   const earthLife = new Life("Mo",35, 135);
-  earthLife.mercuryLifeExpect();
-  expect(earthLife.lifeExpectancy).toEqual(562);
+  earthLife.yearsLeftOnMercury();
+  expect(earthLife.yearsLeft).toEqual(416);
 });
 
 test('should convert Earth age to age on Venus', () => {
   const earthLife = new Life("Mo",35, 135);
   earthLife.venusAge();
   expect(earthLife.age).toEqual(56)
+});
+
+test('should convert Earth years left to years left on Venus', () => {
+  const earthLife = new Life("Mo",35, 135);
+  earthLife.yearsLeftOnVenus();
+  expect(earthLife.yearsLeft).toEqual(161);
 });
 
 test('should convert Earth age to age on Mars', () => {
@@ -42,14 +48,3 @@ test('should convert Earth age to age on Jupiter', () => {
   expect(earthLife.age).toEqual(2)
 });
 
-test('should convert Earth life expectancy to Mercury life expectancy', () => {
-  const earthLife = new Life("Mo",35, 135);
-  earthLife.mercuryLifeExpect();
-  expect(earthLife.lifeExpectancy).toEqual(562);
-});
-
-test('should minus mercuryAge from mercuryLifeExpectancy and return yearsLeftOnMercury', () => {
-  const earthLife = new Life("Mo",35, 135);
-  earthLife.yearsLeftOnMercury();
-  expect(earthLife.yearsLeft).toEqual(416);
-});
