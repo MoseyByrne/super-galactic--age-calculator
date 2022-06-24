@@ -42,6 +42,12 @@ test('should convert Earth age to age on Mars', () => {
   expect(earthLife.age).toEqual(18)
 });
 
+test('should convert Earth years left to years left on Mars', () => {
+  const earthLife = new Life("Mo",35, 135);
+  earthLife.yearsLeftOnMars();
+  expect(earthLife.yearsLeft).toEqual(53);
+});
+
 test('should convert Earth age to age on Jupiter', () => {
   const earthLife = new Life("Mo",35, 135);
   earthLife.jupiterAge();
