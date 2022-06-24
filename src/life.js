@@ -34,4 +34,11 @@ export class Life {
     let marsAge = this.age;
     return marsAge;
   }
+
+  jupiterAge() { 
+    this.age /= 11.86;
+    this.age = Math.floor(this.age);
+    let jupiterAge = this.age;
+    return jupiterAge;
+  }
 }
