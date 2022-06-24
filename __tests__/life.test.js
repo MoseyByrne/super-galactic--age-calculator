@@ -1,5 +1,5 @@
 
-import { Life, mercuryLife } from '../src/life.js';
+import { Life, lifeOnMercury } from '../src/life.js';
 
 describe('Life', () => {
 
@@ -11,8 +11,14 @@ describe('Life', () => {
   });
 });
 
-test('should return age as mercuryLife age', () => {
+test('should convert Earth age to age on mercury', () => {
   const earthLife = new Life("Mo",35, 135);
-  earthLife.lifeOnMercury();
+  earthLife.mercuryAge();
   expect(earthLife.age).toEqual(145)
+});
+
+test('should convert Earth life expectancy to Mercury life expectancy', () => {
+  const earthLife = new Life("Mo",35, 135);
+  earthLife.mercuryLifeExpectancy();
+  expect(earthLife.lifeExpectancy).toEqual(562);
 });
