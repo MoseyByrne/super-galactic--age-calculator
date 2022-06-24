@@ -27,4 +27,11 @@ export class Life {
     let venusAge = this.age;
     return venusAge;
   }
+
+  marsAge() { 
+    this.age /= 1.88;
+    this.age = Math.floor(this.age);
+    let marsAge = this.age;
+    return marsAge;
+  }
 }
