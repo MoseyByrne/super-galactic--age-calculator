@@ -11,8 +11,8 @@ describe('Life', () => {
   });
 });
 
-test('should return earthLife age as mercuryLife age', () => {
+test('should return age as mercuryLife age', () => {
   const earthLife = new Life("Mo",35, 135);
-  earthLife.mercuryLife();
-  expect(mercuryLife.age).toEqual(145)
+  earthLife.lifeOnMercury();
+  expect(earthLife.age).toEqual(145)
 });

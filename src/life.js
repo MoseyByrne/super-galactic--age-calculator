@@ -4,5 +4,12 @@ export class Life {
     this.name = name;
     this.age = age;
     this.lifeExpectancy = lifeExpectancy;
+
+  }
+
+  lifeOnMercury() {
+    this.age /= .24;
+    let mercuryAge = this.age;
+    return (Math.floor(mercuryAge));
   }
 }
