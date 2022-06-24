@@ -40,3 +40,15 @@ test('should convert Earth age to age on Jupiter', () => {
   earthLife.jupiterAge();
   expect(earthLife.age).toEqual(2)
 });
+
+test('should convert Earth life expectancy to Mercury life expectancy', () => {
+  const earthLife = new Life("Mo",35, 135);
+  earthLife.mercuryLifeExpectancy();
+  expect(earthLife.lifeExpectancy).toEqual(562);
+});
+
+test('should minus mercuryAge from mercuryLifeExpectancy and return yearsLeftOnMercury', () => {
+  const earthLife = new Life("Mo",35, 135);
+  earthLife.yearsLeftOnMercury();
+  expect(earthLife.lifeExpectancy).toEqual(417);
+});
