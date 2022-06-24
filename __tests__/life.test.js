@@ -54,3 +54,8 @@ test('should convert Earth age to age on Jupiter', () => {
   expect(earthLife.age).toEqual(2)
 });
 
+test('should convert Earth years left to years left on Jupiter', () => {
+  const earthLife = new Life("Mo",35, 135);
+  earthLife.yearsLeftOnJupiter();
+  expect(earthLife.yearsLeft).toEqual(8);
+});
