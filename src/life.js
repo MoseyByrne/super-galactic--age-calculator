@@ -13,4 +13,11 @@ export class Life {
     let mercuryAge = this.age;
     return mercuryAge;
   }
+
+  mercuryLifeExpectancy() {
+    this.lifeExpectancy /= .24;
+    this.lifeExpectancy = Math.floor(this.lifeExpectancy);
+    let mercuryLifeExpectancy = this.lifeExpectancy;
+    return mercuryLifeExpectancy;
+  }
 }
