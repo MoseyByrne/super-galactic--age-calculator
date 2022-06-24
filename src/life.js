@@ -9,7 +9,8 @@ export class Life {
 
   lifeOnMercury() {
     this.age /= .24;
+    this.age = Math.floor(this.age);
     let mercuryAge = this.age;
-    return (Math.floor(mercuryAge));
+    return mercuryAge;
   }
 }
