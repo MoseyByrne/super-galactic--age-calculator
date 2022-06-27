@@ -1,7 +1,7 @@
 
 # Super Galactic Age Calculator
 
-#### By _Mo Byrne
+#### By Mo Byrne
 
 #### Calculate your age on other planets.
 
